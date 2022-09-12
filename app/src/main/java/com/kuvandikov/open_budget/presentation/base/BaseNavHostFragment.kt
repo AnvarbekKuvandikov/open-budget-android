@@ -8,17 +8,23 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 
-abstract class BaseFragment(
-    @LayoutRes layoutId: Int
+abstract class BaseNavHostFragment(
+    @LayoutRes layoutId: Int,
+    @IdRes private val navHostFragmentId: Int
 ): Fragment(layoutId){
+
+    protected lateinit var navController: NavController
 
     final override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupListeners()
+        val navHostFragment = childFragmentManager.findFragmentById(navHostFragmentId) as NavHostFragment
+        navController = navHostFragment.navController
+
+        setupNavigation()
     }
 
-    protected open fun setupListeners() {
+    protected open fun setupNavigation() {
 
     }
 

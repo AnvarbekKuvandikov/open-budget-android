@@ -8,6 +8,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.kuvandikov.open_budget.R
 import com.kuvandikov.open_budget.databinding.ActivityMainBinding
 import com.kuvandikov.open_budget.databinding.FragmentMainBinding
+import com.yandex.mobile.ads.common.MobileAds
 
 class MainActivity : AppCompatActivity() {
 

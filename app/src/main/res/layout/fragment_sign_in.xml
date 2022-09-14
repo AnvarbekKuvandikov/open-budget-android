@@ -67,5 +67,10 @@
         android:text="Sign up"
         android:textAllCaps="false" />
 
+    <com.yandex.mobile.ads.banner.BannerAdView
+        android:id="@+id/banner_ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
